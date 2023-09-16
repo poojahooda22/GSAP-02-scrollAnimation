@@ -1,0 +1,150 @@
+@font-face {
+    font-family: Mona-Sans;
+    src: url(./Mona-Sans.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+     width: 100%;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Mona-Sans;
+    background-color: #8ed3dcff;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    height: 12vh;
+    
+}
+
+.navleft img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.1  vw;
+    font-weight: 400;
+    margin-right: 60px;
+    color: white;
+}
+
+.part-1 {
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    
+}
+
+.top-con {
+    position: absolute;
+    top: 12%;
+    text-align: center;
+    perspective: 800px;
+    perspective-origin: top;
+   
+}
+
+.top-content {
+    transform: rotateX(0deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+
+.top-con p {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+.top-con h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+.btm-con {
+    position: absolute;
+    bottom: 10%;
+    perspective: 800px;
+    perspective-origin: bottom;
+}
+
+.btm-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: rotateX(0deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+
+.btm-con h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+
+.btm-con p {
+     width: 50%;
+     font-size: 1.2vw;
+     font-weight: 400;
+}
+.img {
+    width: 50%;
+    height: 60%;
+    background-image: url(./uyu7.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #f5cf89;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+
+.part-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(117, 220, 227);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .top-con h1 {
+        font-size: 8vw;
+    }
+    .top-con p {
+        font-size: 4vw;
+    }
+    .btm-con {
+        bottom: 6%;
+    }
+
+    .btm-con h1 {
+        font-size: 8vw;
+    }
+    .btm-con p {
+        width: 80%;
+        font-size: 3vw;
+    }
+} 
